@@ -5,9 +5,27 @@ var selectedRestaurantIndex;
 
 function onAppStart() {
 	console.log("onAppStart");
+	
+	setTimeout(initInfoSlider, 1000);
 	loadDataFromServer();
 }
 
+
+function initInfoSlider() {
+	console.log('lll');
+		window.mySlider = new Swipe(document.getElementById("info_slider"), {
+		startSlide: 0,
+		// speed: 400,
+		auto: 2000,
+		continuous: true,
+		// disableScroll: false,
+		// stopPropagation: false,
+		// callback: function(index, elem) {},
+		// transitionEnd: function(index, elem) {}
+		});
+		
+	}
+		
 
 function loadDataFromServer() {
 	$.ajax({
@@ -26,9 +44,9 @@ function loadDataFromServer() {
 
 /* Hotel List */
 
-$('#hotel_list').on('pageinit', function() {
-	initHotelList();
-});
+//$('#hotel_list').on('pageinit', function() {
+//	initHotelList();
+//});
 
 
 function initHotelList() {
@@ -38,6 +56,12 @@ function initHotelList() {
 	}
 	
 	// TODO: Load hotel list
+	showHotelList(data.Hotels[i]);
+      function showHotelList(hotel) {
+      	for (i = 0; i < hotel.Name; i++){
+	      $('#hotelListing').html(hotel.Name[i] + "<br>");
+	      }
+      }
 }
 
 function showHotel(hotelindex) {
@@ -52,6 +76,8 @@ function showHotel(hotelindex) {
 
 $('#hotel_details').on('pagebeforeshow', function() {
 	initHotelDetails();
+var storedValue = localStorage.getItem('HotelStorage2');
+$('#hotel_details_content').append(storedValue);
 });
 
 function initHotelDetails() {
@@ -60,12 +86,11 @@ function initHotelDetails() {
 	// hint: how could  selectedHotelIndex  be useful here?
 
 	var hotel = data.Hotels[0];
-	alert(hotel.Name);
+	//alert(hotel.Rating);
+        var storeDetailLocally = hotel.Name;
+			localStorage.setItem('HotelStorage2', storeDetailLocally);
+//	$('#hotel_details_content').append(hotel.Description);	
 
-	
-	//loadHotelData(hotel, selectedHotelIndex);
-	//loadHotelMap(hotel);
-	//loadHotelImages(hotel);
 }
 
 

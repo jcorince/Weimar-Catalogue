@@ -3,7 +3,7 @@
 <head>
 	<title>Weimar Catalogue</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
  	<!-- jQuery & jQuery mobile -->
 	<link rel="stylesheet" href="lib/jqm1.3.1/jquery.mobile-1.3.1.min.css" />
@@ -52,6 +52,7 @@
 	    		<li><a href="#hotel_details">Hotel #1</a></li>
 	    		
 	    	</ul>
+	    	<div id="hotelListing">test</div>
 	    </div>
 	    
 	    <div id="hotel_photo_cache" style="display:none">
@@ -65,7 +66,7 @@
 	<div data-role="page" id="hotel_details" data-back-btn-text="Hotels" data-add-back-btn="true">
 	    
 	    <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
-	        <h3 id="hotel_details_header">Lorem Ipsum</h3>
+	        <h3 id="hotel_details_header">test</h3>
 	    </div>
 	    
 	    <div data-role="content" id="hotel_details_content">
@@ -104,7 +105,7 @@
 	<div data-role="page" id="restaurant_details" data-back-btn-text="Restaurants" data-add-back-btn="true">
 	    
 	    <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
-	        <h3 id="restaurant_details_header">Lorem Ipsum</h3>
+	        <h3 id="restaurant_details_header">test</h3>
 	    </div>
 	    
 	    <div data-role="content" id="restaurant_details_content">
@@ -122,14 +123,84 @@
 	    </div>
 	    
 	    <div data-role="content">
-	    	<!-- TODO: define elements here -->	    	
+	    	<div>
+	    		<div id='info_slider' class='swipe' style="width:300px;height:200px;margin-left:auto;margin-right:auto">
+ 					<div class='swipe-wrap' id="info_photos">
+ 						<div display="none"><img src="Fassade.jpg" height="200" width="300"/></div>
+ 						<div display="none"><img src="Atrium.jpg" height="200" width="300"/></div>
+ 						<div display="none"><img src="Mitarbeiter.jpg" height="200" width="300"/></div>
+ 						<div display="none"><img src="info.jpg" height="200" width="300"/></div>
+				 	</div>
+				</div>
+	    		
+	    		<p align = "justify">Weimar Tourist Information at Markt 10 is the first port of call for visitors to Weimar – and is also 
+	    			popular among local residents! The staff can help you with all your tourism enquiries – and if you’ve 
+	    			any requests, they’ll do their utmost to find a solution. As well as the tourist services provided by 
+	    			weimar GmbH, Weimar Tourist Information is also the place to go to see representatives of the Weimar 
+	    			Classic Foundation, the Buchenwald Memorial Society and Weimar District Council. We look forward to 
+	    			seeing you! 
+	    		</p> 
+	    		<a href="#offered_services" data-role="button">Our services</a>
+	    		<h4 id="blue">Address</h4>
+	    		Tourist-Information Weimar<br/>
+	    		Markt 10 <br/>
+	    		99423 Weimar<br/>
+	    		<h5 id="blue">Opening hours</h5>
+	    		
+	    		<p ><strong>April - October:</strong><br />
+				Mon - Sat 9.30am - 7pm<br />
+				Sun and public holiday 9.30am - 3pm<br /><br/>
+				<strong>November - March:</strong><br />
+				Mon - Fri 9.30am - 6pm<br />
+				Sat, Sun and public holiday 9.30am - 2.30pm</p>
+	    		<fieldset class="ui-grid-a"><div class="ui-block-a"><a href="tel:+4936437450" data-role ="button">Call us</a></div>
+	    		<div class="ui-block-b"><a href="mailto:tourist-info@weimar.de" data-role ="button">E-mail us</a></div></fieldset>
+	    		<fieldset class="ui-grid-a"><div class="ui-block-a"><a href ="url:http://www.weimar.de/en/tourismus" data-role ="button">Our website</a></div>
+	    		<div class="ui-block-b"><a href="geo:50.979392, 11.330358" data-role ="button">Find us</a></div></fieldset>
+	    		<h4 id="blue">Alternate address</h4>
+	    		Tourist-Information Weimar<br/>
+	    		Friedensstraße 1<br/>
+	    		99423 Weimar<br/>
+	    		<h5 id="blue">Opening hours</h5>
+	    		<p>Mon - Sat, 10am - 6pm</p>
+	    		<fieldset class="ui-grid-a"><div class="ui-block-a"><a href="tel:+4936437450" data-role ="button">Call us</a></div>
+	    		<div class="ui-block-b"><a href="mailto:tourist-info@weimar.de" data-role ="button">E-mail us</a></div></fieldset>
+	    		<fieldset class="ui-grid-a"><div class="ui-block-a"><a href ="url:http://www.weimar.de/en/tourismus" data-role ="button">Our website</a></div>
+	    		<div class="ui-block-b"><a href="geo:50.985052, 11.329189" data-role ="button">Find us</a></div></fieldset>
+	    		   								
+	    	</div>	    	
 	    </div>
 	</div>
+	
+	<div data-role="page" id="offered_services" data-back-btn-text="Info" data-add-back-btn="true">
+		<div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
+			<h3>Services</h3>
+		</div>
+		<div data-role="content">
+			<ul>	
+    			<li>Tickets for public guided tours (held daily at 10am and 2pm)</li>
+    			<li>Organisation of themed guided tours</li>
+    			<li>Hire of PDAs for multimedia sightseeing tours</li>
+    			<li>Reservation of hotel, guesthouse and bed & breakfast accommodation as well as holiday homes</li>
+    			<li>Organisation of tourist programmes for groups</li>
+    			<li>All-inclusive packages for individual travellers and tour parties</li>
+    			<li>Ticket service for local, regional and national events</li>
+    			<li>Weimar maps</li>
+    			<li>Thüringen maps</li>
+    			<li>Tickets for the Belvedere Express</li>
+    			<li>Souvenirs</li>
+    			<li>Restaurant reservations</li>
+    			<li>Information</li>
+			</ul>	
+		</div>	
+	  </div>
 
 
 	<!-- Application Javascript file -->
 	<script src="js/app.js"></script>
+
 	
 
 </body>
 </html>
+
