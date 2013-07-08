@@ -19,7 +19,7 @@
     <!-- PhoneGap -->
 	<script src="js/cordova-2.6.0.js" type="text/javascript"></script>
 	<script src="js/phonegap-helper.js" type="text/javascript"></script>
-	
+
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/app.css" />
 </head>
@@ -32,31 +32,45 @@
 		  <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 	        <h3>Weimar</h3>
 	    </div>
-	    
+	    <div id='home_slider' class='swipe' style="width:300px;height:200px;margin-left:auto;margin-right:auto">
+ 		<div class='swipe-wrap' id="info_photos">
+ 			<div display="none"><img src="1.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="2.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="3.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="10.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="9.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="4.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="7.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="5.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="8.jpg" height="200" width="300"/></div>
+ 			<div display="none"><img src="6.jpg" height="200" width="300"/></div>
+	 	</div>
+	    </div>
+
 	    <div data-role="content">
 	    	<a href="#hotel_list" data-role="button">Hotels</a>
 	    	<a href="#restaurant_list" data-role="button">Restaurants</a>
 	    	<a href="#general_info" data-role="button">Infos</a>
 	    </div>
 	</div>
-	
-	
+
+
 	<!-- Hotel List -->
 	<div data-role="page" id="hotel_list" data-back-btn-text="Start" data-add-back-btn="true">
 		  <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 	        <h3>Hotels</h3>
 	    </div>
-	    
+
 	    <div data-role="content">
 	    	<ul data-role="list" id="hotel_listview">
 	    		<li><a href="#hotel_details">Hotel #1</a></li>
-	    		
+
 	    	</ul>
 	    	<div id="hotelListing">test</div>
 	    </div>
-	    
+
 	    <div id="hotel_photo_cache" style="display:none">
-	    	
+
 	    </div>
 	</div>
 
@@ -64,36 +78,36 @@
 
 	<!-- Hotel Details -->
 	<div data-role="page" id="hotel_details" data-back-btn-text="Hotels" data-add-back-btn="true">
-	    
+
 	    <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 	        <h3 id="hotel_details_header">test</h3>
 	    </div>
-	    
+
 	    <div data-role="content" id="hotel_details_content">
 	    	<!-- TODO: define elements here -->
 	    </div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 	<!-- Restaurant List -->
 	<div data-role="page" id="restaurant_list" data-back-btn-text="Start" data-add-back-btn="true">
 		  <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 	        <h3>Restaurants</h3>
 	    </div>
-	    
+
 	    <div data-role="content">
 	    	<ul data-role="list" id="restaurant_listview">
 	    		<li><a href="#restaurant_details">Restaurant #1</a></li>
-	    		
+
 	    	</ul>
 	    </div>
-	    
+
 	    <div id="restaurant_photo_cache" style="display:none">
 
 	    </div>
@@ -103,11 +117,11 @@
 
 	<!-- Restaurant Details -->
 	<div data-role="page" id="restaurant_details" data-back-btn-text="Restaurants" data-add-back-btn="true">
-	    
+
 	    <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 	        <h3 id="restaurant_details_header">test</h3>
 	    </div>
-	    
+
 	    <div data-role="content" id="restaurant_details_content">
 	    	<!-- TODO: define elements here -->	    	
 	    </div>
@@ -117,11 +131,11 @@
 
 	<!-- General Infos -->
 	<div data-role="page" id="general_info" data-back-btn-text="Home" data-add-back-btn="true">
-	    
+
 	    <div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 	        <h3>About Weimar</h3>
 	    </div>
-	    
+
 	    <div data-role="content">
 	    	<div>
 	    		<div id='info_slider' class='swipe' style="width:300px;height:200px;margin-left:auto;margin-right:auto">
@@ -132,7 +146,7 @@
  						<div display="none"><img src="info.jpg" height="200" width="300"/></div>
 				 	</div>
 				</div>
-	    		
+
 	    		<p align = "justify">Weimar Tourist Information at Markt 10 is the first port of call for visitors to Weimar – and is also 
 	    			popular among local residents! The staff can help you with all your tourism enquiries – and if you’ve 
 	    			any requests, they’ll do their utmost to find a solution. As well as the tourist services provided by 
@@ -146,7 +160,7 @@
 	    		Markt 10 <br/>
 	    		99423 Weimar<br/>
 	    		<h5 id="blue">Opening hours</h5>
-	    		
+
 	    		<p ><strong>April - October:</strong><br />
 				Mon - Sat 9.30am - 7pm<br />
 				Sun and public holiday 9.30am - 3pm<br /><br/>
@@ -167,11 +181,11 @@
 	    		<div class="ui-block-b"><a href="mailto:tourist-info@weimar.de" data-role ="button">E-mail us</a></div></fieldset>
 	    		<fieldset class="ui-grid-a"><div class="ui-block-a"><a href ="url:http://www.weimar.de/en/tourismus" data-role ="button">Our website</a></div>
 	    		<div class="ui-block-b"><a href="geo:50.985052, 11.329189" data-role ="button">Find us</a></div></fieldset>
-	    		   								
+
 	    	</div>	    	
 	    </div>
 	</div>
-	
+
 	<div data-role="page" id="offered_services" data-back-btn-text="Info" data-add-back-btn="true">
 		<div data-theme="" data-role="header" data-position="fixed" data-tap-toggle="false">
 			<h3>Services</h3>
@@ -199,8 +213,7 @@
 	<!-- Application Javascript file -->
 	<script src="js/app.js"></script>
 
-	
+
 
 </body>
 </html>
-
